@@ -162,71 +162,40 @@ Wire Wire Line
 	3750 2200 3900 2200
 Connection ~ 3900 2200
 Wire Wire Line
-	3900 2200 4100 2200
-Wire Wire Line
 	4300 3250 4300 2200
-$Comp
-L Device:R R2
-U 1 1 6038709D
-P 3750 1650
-F 0 "R2" V 3543 1650 50  0000 C CNN
-F 1 "50" V 3634 1650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3680 1650 50  0001 C CNN
-F 3 "~" H 3750 1650 50  0001 C CNN
-	1    3750 1650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	4100 2200 4100 1650
-Wire Wire Line
-	4100 1650 3900 1650
-Connection ~ 4100 2200
-Wire Wire Line
-	4100 2200 4300 2200
-Wire Wire Line
-	3600 1650 3500 1650
-Wire Wire Line
-	2950 2000 3500 2000
-Wire Wire Line
-	3500 2000 3500 1650
-Connection ~ 3500 1650
-Wire Wire Line
-	3500 1650 3400 1650
+	2950 2000 3300 2000
 $Comp
 L Device:R R1
 U 1 1 603867ED
-P 3250 1650
-F 0 "R1" V 3043 1650 50  0000 C CNN
-F 1 "1k" V 3134 1650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3180 1650 50  0001 C CNN
-F 3 "~" H 3250 1650 50  0001 C CNN
-	1    3250 1650
-	0    1    1    0   
+P 3600 1400
+F 0 "R1" V 3393 1400 50  0000 C CNN
+F 1 "4.7k" V 3484 1400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3530 1400 50  0001 C CNN
+F 3 "~" H 3600 1400 50  0001 C CNN
+	1    3600 1400
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 603885F7
-P 3000 1750
-F 0 "#PWR0106" H 3000 1500 50  0001 C CNN
-F 1 "GND" H 3005 1577 50  0000 C CNN
-F 2 "" H 3000 1750 50  0001 C CNN
-F 3 "" H 3000 1750 50  0001 C CNN
-	1    3000 1750
+P 3600 1650
+F 0 "#PWR0106" H 3600 1400 50  0001 C CNN
+F 1 "GND" H 3605 1477 50  0000 C CNN
+F 2 "" H 3600 1650 50  0001 C CNN
+F 3 "" H 3600 1650 50  0001 C CNN
+	1    3600 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3100 1650 3000 1650
-Wire Wire Line
-	3000 1650 3000 1750
 $Comp
 L power:+12V #PWR0107
 U 1 1 60389FC5
-P 1050 2000
-F 0 "#PWR0107" H 1050 1850 50  0001 C CNN
-F 1 "+12V" H 1065 2173 50  0000 C CNN
-F 2 "" H 1050 2000 50  0001 C CNN
-F 3 "" H 1050 2000 50  0001 C CNN
-	1    1050 2000
+P 1050 1050
+F 0 "#PWR0107" H 1050 900 50  0001 C CNN
+F 1 "+12V" H 1065 1223 50  0000 C CNN
+F 2 "" H 1050 1050 50  0001 C CNN
+F 3 "" H 1050 1050 50  0001 C CNN
+	1    1050 1050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -340,4 +309,82 @@ $EndComp
 Wire Wire Line
 	4100 3350 4300 3350
 Connection ~ 4300 3350
+Wire Wire Line
+	3900 2200 4300 2200
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 6041FB91
+P 3600 1000
+F 0 "RV1" H 3530 1046 50  0000 R CNN
+F 1 "5k" H 3530 955 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3266P_Horizontal" H 3600 1000 50  0001 C CNN
+F 3 "~" H 3600 1000 50  0001 C CNN
+	1    3600 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1300 3300 1200
+$Comp
+L Diode:1N4148 D2
+U 1 1 60426D7E
+P 3300 1450
+F 0 "D2" V 3254 1530 50  0000 L CNN
+F 1 "1N4148" V 3345 1530 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 1450 50  0001 C CNN
+F 3 "~" H 3300 1450 50  0001 C CNN
+	1    3300 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 1700 3300 2000
+Connection ~ 3300 1700
+Wire Wire Line
+	3300 1600 3300 1700
+Text Notes 1350 1100 0    50   ~ 0
+Supply voltage 4-45V
+$Comp
+L power:+12V #PWR0109
+U 1 1 60432A38
+P 2950 1050
+F 0 "#PWR0109" H 2950 900 50  0001 C CNN
+F 1 "+12V" H 2965 1223 50  0000 C CNN
+F 2 "" H 2950 1050 50  0001 C CNN
+F 3 "" H 2950 1050 50  0001 C CNN
+	1    2950 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1050 1050 2000
+Wire Wire Line
+	2950 1700 2950 1500
+Wire Wire Line
+	2950 1200 2950 1050
+$Comp
+L Device:R R2
+U 1 1 60431C38
+P 2950 1350
+F 0 "R2" V 2743 1350 50  0000 C CNN
+F 1 "220k" V 2834 1350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2880 1350 50  0001 C CNN
+F 3 "~" H 2950 1350 50  0001 C CNN
+	1    2950 1350
+	-1   0    0    1   
+$EndComp
+Text Notes 4050 1600 0    50   ~ 0
+The feedback hack is due to @RueNahcMohr\nBy introducing a diode drop of 0.4-0.5V,\nthe output voltage can be made lower than 1.23V
+Wire Wire Line
+	3300 1200 3600 1200
+Wire Wire Line
+	3600 1200 3600 1150
+Wire Wire Line
+	3600 1200 3600 1250
+Connection ~ 3600 1200
+Wire Wire Line
+	3750 1000 3900 1000
+Wire Wire Line
+	3900 1000 3900 2200
+Wire Wire Line
+	3600 1550 3600 1650
+Wire Wire Line
+	2950 1700 3300 1700
 $EndSCHEMATC
