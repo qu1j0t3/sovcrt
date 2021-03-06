@@ -51,8 +51,8 @@ L Device:CP C2
 U 1 1 6037ED6B
 P 3900 2550
 F 0 "C2" H 4018 2596 50  0000 L CNN
-F 1 "22u 10V" H 4018 2505 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 3938 2400 50  0001 C CNN
+F 1 "470u 16V" H 4018 2505 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.80mm" H 3938 2400 50  0001 C CNN
 F 3 "~" H 3900 2550 50  0001 C CNN
 	1    3900 2550
 	1    0    0    -1  
@@ -364,14 +364,14 @@ L Device:R R2
 U 1 1 60431C38
 P 2950 1350
 F 0 "R2" V 2743 1350 50  0000 C CNN
-F 1 "220k" V 2834 1350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2880 1350 50  0001 C CNN
+F 1 "1meg" V 2834 1350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2880 1350 50  0001 C CNN
 F 3 "~" H 2950 1350 50  0001 C CNN
 	1    2950 1350
 	-1   0    0    1   
 $EndComp
 Text Notes 4050 1600 0    50   ~ 0
-The feedback hack is due to @RueNahcMohr\nBy introducing a diode drop of 0.4-0.5V,\nthe output voltage can be made lower than 1.23V
+The feedback hack is due to @RueNahcMohr\nBy introducing a diode drop of 0.3-0.4V,\nthe output voltage can be made lower than 1.23V
 Wire Wire Line
 	3300 1200 3600 1200
 Wire Wire Line
