@@ -162,8 +162,6 @@ Wire Wire Line
 	3750 2200 3900 2200
 Connection ~ 3900 2200
 Wire Wire Line
-	4300 3250 4300 2200
-Wire Wire Line
 	2950 2000 3300 2000
 $Comp
 L Device:R R1
@@ -284,18 +282,6 @@ Connection ~ 1350 2450
 Wire Wire Line
 	1350 2450 1350 2800
 $Comp
-L Connector:TestPoint TP2
-U 1 1 6045813A
-P 4300 2200
-F 0 "TP2" H 4358 2318 50  0000 L CNN
-F 1 "TestPoint" H 4358 2227 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_2.5x2.5mm_Drill1.2mm" H 4500 2200 50  0001 C CNN
-F 3 "~" H 4500 2200 50  0001 C CNN
-	1    4300 2200
-	1    0    0    -1  
-$EndComp
-Connection ~ 4300 2200
-$Comp
 L Connector:TestPoint TP1
 U 1 1 6045889E
 P 4100 3350
@@ -322,56 +308,21 @@ F 3 "~" H 3600 1000 50  0001 C CNN
 	1    3600 1000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3300 1300 3300 1200
-$Comp
-L Diode:1N4148 D2
-U 1 1 60426D7E
-P 3300 1450
-F 0 "D2" V 3254 1530 50  0000 L CNN
-F 1 "1N4148" V 3345 1530 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 1450 50  0001 C CNN
-F 3 "~" H 3300 1450 50  0001 C CNN
-	1    3300 1450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3300 1700 3300 2000
-Connection ~ 3300 1700
-Wire Wire Line
-	3300 1600 3300 1700
 Text Notes 1350 1100 0    50   ~ 0
-Supply voltage 4-45V
-$Comp
-L power:+12V #PWR0109
-U 1 1 60432A38
-P 2950 1050
-F 0 "#PWR0109" H 2950 900 50  0001 C CNN
-F 1 "+12V" H 2965 1223 50  0000 C CNN
-F 2 "" H 2950 1050 50  0001 C CNN
-F 3 "" H 2950 1050 50  0001 C CNN
-	1    2950 1050
-	1    0    0    -1  
-$EndComp
+Supply voltage 4-40V
 Wire Wire Line
 	1050 1050 1050 2000
-Wire Wire Line
-	2950 1700 2950 1500
-Wire Wire Line
-	2950 1200 2950 1050
 $Comp
 L Device:R R2
 U 1 1 60431C38
-P 2950 1350
-F 0 "R2" V 2743 1350 50  0000 C CNN
-F 1 "1meg" V 2834 1350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2880 1350 50  0001 C CNN
-F 3 "~" H 2950 1350 50  0001 C CNN
-	1    2950 1350
+P 4300 2850
+F 0 "R2" V 4093 2850 50  0000 C CNN
+F 1 "3R3 1/2W" V 4184 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4230 2850 50  0001 C CNN
+F 3 "~" H 4300 2850 50  0001 C CNN
+	1    4300 2850
 	-1   0    0    1   
 $EndComp
-Text Notes 4050 1600 0    50   ~ 0
-The feedback hack is due to @RueNahcMohr\nBy introducing a diode drop of 0.3-0.4V,\nthe output voltage can be made lower than 1.23V
 Wire Wire Line
 	3300 1200 3600 1200
 Wire Wire Line
@@ -386,5 +337,37 @@ Wire Wire Line
 Wire Wire Line
 	3600 1550 3600 1650
 Wire Wire Line
-	2950 1700 3300 1700
+	4300 2700 4300 2200
+Wire Wire Line
+	3300 1200 3300 2000
+Wire Wire Line
+	4300 3250 4300 3050
+Connection ~ 4300 2200
+$Comp
+L Connector:TestPoint TP2
+U 1 1 6045813A
+P 4300 2200
+F 0 "TP2" H 4358 2318 50  0000 L CNN
+F 1 "TestPoint" H 4358 2227 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.5x2.5mm_Drill1.2mm" H 4500 2200 50  0001 C CNN
+F 3 "~" H 4500 2200 50  0001 C CNN
+	1    4300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 60443F3B
+P 4100 3050
+F 0 "TP3" H 4158 3168 50  0000 L CNN
+F 1 "TestPoint" H 4158 3077 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.5x2.5mm_Drill1.2mm" H 4300 3050 50  0001 C CNN
+F 3 "~" H 4300 3050 50  0001 C CNN
+	1    4100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3050 4300 3050
+Connection ~ 4300 3050
+Wire Wire Line
+	4300 3050 4300 3000
 $EndSCHEMATC
